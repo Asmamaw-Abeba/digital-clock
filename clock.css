@@ -1,0 +1,24 @@
+.aa {
+  text-align: center;
+}
+
+.clock {
+  font-family: Arial;
+  font-size: 14px;
+  margin: 0 auto;
+  display: flex;
+  width: 150px;
+  border: none;
+  border-radius: 75px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 9%);
+  height: 150px;
+}
+
+button {
+  background-color: hsl(0, 0%, 9%);
+  padding: 10px 12px;
+  margin-left: 2px;
+  color: white;
+}
