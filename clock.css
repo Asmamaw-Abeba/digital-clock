@@ -20,13 +20,13 @@ body {
   font-size: 14px;
   margin: 0 auto;
   display: flex;
-  width: 250px;
+  width: 200px;
   border: none;
-  border-radius: 55px;
+  border-radius: 45px;
   justify-content: center;
   align-items: center;
   background-color: hsl(0, 0%, 9%);
-  height: 250px;
+  height: 200px;
 
   margin-bottom: 0;
 }
@@ -50,6 +50,12 @@ button {
 
 .second-button {
   background-color: brown;
+}
+
+.hour-button,
+.minute-button,
+.second-button {
+  border-radius: 10px;
 }
 
 .rope-1 {
@@ -108,7 +114,7 @@ button {
 }
 
 .mode-button {
-  margin-left: -2px;
+  margin-left: -8px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
@@ -120,6 +126,8 @@ button {
   opacity: 0.9;
   height: 1px;
   width: 1px;
+  /* to minimize the width of modes  use scaling*/
+  transform: scaleX(0.5); 
   border: none;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
