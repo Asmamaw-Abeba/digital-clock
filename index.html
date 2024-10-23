@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asmamaw clock</title>
+    <style>
+
+      .aa {
+        text-align: center;
+      }
+
+      .clock {
+        font-family: Arial;
+        font-size: 14px;
+        margin: 0 auto;
+        display: flex;
+        width: 150px;
+        border: none;
+        border-radius: 75px;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 9%);
+        height: 150px;
+      }
+
+      button {
+        background-color: hsl(0, 0%, 9%);
+        padding: 10px 12px;
+        margin-left: 2px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="aa">Ase-clock</div>
+
+    <div class="clock">
+      <button class="hour">00</button>
+      <button class="minute">00</button>
+      <button class="second">00</button>
+    </div>
+    
+
+    <script>
+      function countSecond() {
+
+        const s = document.querySelector('.second');
+        const m = document.querySelector('.minute');
+        const h = document.querySelector('.hour');
+        
+        let hour = 0;
+        let minute = 0;
+        let second = 0;
+        
+        setInterval(() => {
+          second += 1;
+          if (second === 60) {
+            second = 1;
+            minute += 1;
+          }
+
+          if (minute === 60) {
+              minute = 0;
+              hour += 1;
+            }
+
+          if (hour === 12) {
+            hour = 1;
+          }  
+
+        s.innerText = second;
+        m.innerText = minute;
+        h.innerText = hour;
+
+        }, 1000);  
+
+        
+      }
+      countSecond();
+
+      
+
+    </script>
+  </body>
+</html>
