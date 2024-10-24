@@ -51,7 +51,9 @@ button {
 
 .second-button {
   background-color: red;
+  position: relative;
 }
+
 
 .hour-button,
 .minute-button,
@@ -133,8 +135,9 @@ button {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   text-align: center;
-  //background-color: white;
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .container {

@@ -11,7 +11,7 @@ function countSecond() {
   setInterval(() => {
     second += 1;
     if (second === 60) {
-      second = 1;
+      second = 0;
       minute += 1;
     }
 
@@ -24,9 +24,9 @@ function countSecond() {
       hour = 1;
     }  
 
-  s.innerText = second;
-  m.innerText = minute;
-  h.innerText = hour;
+  s.innerText = second + 's';
+  m.innerText = minute + 'm';
+  h.innerText = hour + 'h';
 
   }, 1000);  
 
