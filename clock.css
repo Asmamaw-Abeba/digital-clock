@@ -41,15 +41,16 @@ button {
 }
 
 .hour-button {
-  background-color: blue;
+  background-color: green;
 }
 
 .minute-button {
-  background-color: blueviolet;
+  color: black;
+  background-color: yellow;
 }
 
 .second-button {
-  background-color: brown;
+  background-color: red;
 }
 
 .hour-button,
