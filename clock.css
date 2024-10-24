@@ -134,3 +134,16 @@ button {
   text-align: center;
   //background-color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 250px;
+  }
+  body {
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 24px;
+  }
+}
