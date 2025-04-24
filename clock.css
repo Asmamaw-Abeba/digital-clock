@@ -1,44 +1,68 @@
-body {
-  padding: 50px 50px;
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  padding: 50px;
+  background: linear-gradient(135deg, #1e2a44 0%, #000000 100%);
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+}
 
+/* Title Styling */
 .aa {
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Container for Clock and Mode Buttons */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Clock Container */
 .clock-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
+/* Clock Styling */
 .clock {
-  margin-top: 0;
-  background-color: black;
-  font-family: Arial;
-  font-size: 14px;
-  margin: 0 auto;
-  width: 200px;
-  border: none;
-  border-radius: 45px;
+  background-color: hsl(0, 0%, 9%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 9%);
-  height: 200px;
-
   position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border: 5px solid #333;
 }
 
+/* Apple Logo */
 .logo {
-  opacity: 0.9px;
   position: absolute;
-  top: 1px;
-  bottom: 0p;
+  top: 20px;
 }
 
 .apple-logo {
@@ -46,144 +70,239 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 30px;
-  height: 70px;
+  height: 50px;
 }
 
+/* Time Display Buttons */
 .three-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 }
 
-button {
-  width: 50px;
-  height: 50px;
-  background-color: hsl(0, 0%, 9%);
-  padding: 10px 12px;
-  margin-left: 2px;
-  color: white;
+.separator {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 300;
 }
-
-.hour-button {
-  margin-left: 2px;
-  width: 20px;
-  padding: 15px;
-
-  background-color: green;
-}
-
-.minute-button {
-  margin-left: 2px;
-  width: 20px;
-  padding: 15px;
-
-  color: black;
-  background-color: yellow;
-}
-
-.second-button {
-  margin-left: 2px;
-  width: 20px;
-  padding: 15px;
-  
-  background-color: red;
-  position: relative;
-}
-
 
 .hour-button,
 .minute-button,
 .second-button {
-  border-radius: 10px;
+  width: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
 }
 
-.rope-1 {
-  width: 130px;
-
+.hour-button {
+  background-color: #4caf50;
 }
 
-.rope-2 {
-  opacity: 0.97;
-  width: 120px;
-  border-radius: 3px;
+.minute-button {
+  background-color: #ffeb3b;
 }
 
-.rope-3 {
-  opacity: 0.95;
-  width: 110px;
-  border-radius: 5px;
-  font-family: Arial;
-  font-size: 20px;
-  text-shadow: rgb(11, 11, 11);
+.second-button {
+  background-color: #f44336;
 }
 
-.rope-4 {
-  width: 100px;
-  opacity: 0.9;
+.hour-button:hover,
+.minute-button:hover,
+.second-button:hover {
+  transform: scale(1.05);
+}
 
-  font-family: Arial;
-  font-size: 20px;
-  text-shadow: rgb(11, 11, 11);
+/* Rope Buttons */
+button {
+  background-color: #2c2c2c;
+  border: none;
+  margin: 2px 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .rope-1,
 .rope-2,
+.rope-3,
+.rope-4 {
+  height: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(90deg, #333, #555);
+  position: relative;
+  overflow: hidden;
+}
+
+.rope-1 {
+  width: 150px;
+}
+
+.rope-2 {
+  width: 140px;
+  opacity: 0.97;
+}
+
 .rope-3 {
-  border: none;
-  box-shadow: 2px 5px 10px rgba(red, green, blue, 1);
-  /* border-radius: 2px; */
+  width: 130px;
+  opacity: 0.95;
+}
+
+.rope-4 {
+  width: 120px;
+  opacity: 0.9;
 }
 
 .top-rope {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .bottom-rope {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: ;
+/* Rope Effect with Pseudo-elements */
+.rope-1::before,
+.rope-2::before,
+.rope-3::before,
+.rope-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5px,
+    rgba(255, 255, 255, 0.1) 5px,
+    rgba(255, 255, 255, 0.1) 10px
+  );
 }
 
+/* Mode Buttons */
 .mode-button {
-  margin-left: -8px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
 .mode {
-  opacity: 0.9;
-  height: 1px;
-  width: 1px;
-  /* to minimize the width of modes  use scaling*/
-  transform: scaleX(0.5); 
-  border: none;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.mode:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.2);
+}
 
+/* Animation for Seconds */
+.animate-second {
+  transition: all 0.3s ease-in-out;
+}
 
-@media only screen and (max-width: 600px) {
-  .container {
-    margin: 0 auto;
-    height: 100px;
-    margin-top: 250px;
-  }
+/* Animation for Rope Buttons */
+.rope-animate {
+  animation: rope-pulse 0.3s ease-in-out;
+}
+
+@keyframes rope-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
   body {
-    align-items: center;
-    padding: 10px 10px;
-    font-size: 24px;
+    padding: 20px;
+  }
+
+  .aa {
+    font-size: 2rem;
+  }
+
+  .clock {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hour-button,
+  .minute-button,
+  .second-button {
+    width: 50px;
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .separator {
+    font-size: 1.5rem;
+  }
+
+  .rope-1 { width: 120px; }
+  .rope-2 { width: 110px; }
+  .rope-3 { width: 100px; }
+  .rope-4 { width: 90px; }
+
+  .apple-logo {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .aa {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .clock {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hour-button,
+  .minute-button,
+  .second-button {
+    width: 40px;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .separator {
+    font-size: 1.2rem;
+  }
+
+  .rope-1 { width: 100px; }
+  .rope-2 { width: 90px; }
+  .rope-3 { width: 80px; }
+  .rope-4 { width: 70px; }
+
+  .apple-logo {
+    height: 30px;
+  }
+
+  .mode {
+    width: 15px;
+    height: 15px;
   }
 }

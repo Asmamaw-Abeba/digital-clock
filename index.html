@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Asmamaw clock</title>
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
+    <title>Asmamaw Clock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link rel="stylesheet" href="clock.css">
+    <!-- Adding a Google Font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <div class="aa">Asmamaw-clock</div>
+    <div class="aa">Asmamaw Clock</div>
 
     <div class="container">
       <div class="clock-container">
@@ -21,30 +18,28 @@
         <button class="rope-1 top-rope"></button>
         <div class="clock">
           <div class="logo">
-            <img class="apple-logo" src="image/logo.png" alt="">
+            <img class="apple-logo" src="image/logo.png" alt="Apple Logo">
           </div>
-
           <div class="three-buttons">
-            <input class="hour hour-button"value="12">
-            <input class="minute minute-button" value="00">
-            <input class="second second-button"value="00">
+            <input class="hour hour-button" value="12" readonly>
+            <span class="separator">:</span>
+            <input class="minute minute-button" value="00" readonly>
+            <span class="separator">:</span>
+            <input class="second second-button" value="00" readonly>
           </div>
-         
         </div>
         <button class="rope-1 bottom-rope"></button>
         <button class="rope-2 bottom-rope"></button>
-        <button class="rope-3 bottom-rope">0</button>
-        <button class="rope-4 bottom-rope">0</button>
+        <button class="rope-3 bottom-rope"></button>
+        <button class="rope-4 bottom-rope"></button>
       </div>
 
       <div class="mode-button">
-        <button class="mode"></button>
-        <button class="mode"></button>
+        <button class="mode timezone-mode" title="Toggle Timezone"></button>
+        <button class="mode settings-mode" title="Settings"></button>
       </div>
-
     </div>
-   
 
-    <script language="javascript" src="clock.js"></script>
+    <script src="clock.js"></script>
   </body>
 </html>
